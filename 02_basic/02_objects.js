@@ -31,3 +31,15 @@ user1.greeting2=function(){
     console.log(`Hello JS user, ${this.name}`);
 }
 console.log(user1.greeting2());
+
+// Object de-structure example
+const course={
+    courseName:"Js in hindi",
+    price:999,
+    courseInstructor:"Taiyab"
+}
+// De-structor
+const {courseInstructor:instructor}=course;
+console.log(`Course instructor name: ${instructor}`);
+
+
