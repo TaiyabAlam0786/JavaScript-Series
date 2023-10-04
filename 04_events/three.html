@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous operations</title>
+</head>
+
+<body>
+    <h1> JavaScript async</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // const msg= function(){
+    //     console.log('I am Happy.');
+    // }
+    // const clear = setInterval(msg,2000); 
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = 'Without javaScript is not write web applications';
+    }
+    let intervalId;
+    document.getElementById('start').addEventListener('click', function (e) {
+        intervalId = setInterval(changeText, 3000);
+        console.log('start');
+    });
+
+    document.getElementById('stop').addEventListener('click', function (e) {
+        clearInterval(intervalId);
+        console.log('stop');
+    });
+</script>
+
+</html>
